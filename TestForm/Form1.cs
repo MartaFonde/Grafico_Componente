@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GraficoBarrasComponente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,21 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace TestForm
 {
     public partial class Form1 : Form
     {
+        List<GraficoBarras> graficos;
+        int filas = 1;
+        int columnas = 3; 
+
         public Form1()
         {
             InitializeComponent();
 
-            grafico.Valores = new List<int>();
-            grafico.Valores.Add(4);
-            grafico.Valores.Add(6);
+            grafico.Valores = new List<double>();
+            grafico.Valores.Add(4.5);
+            grafico.Valores.Add(6.1);
             grafico.Valores.Add(8);
-            grafico.Valores.Add(2);
-            grafico.Valores.Add(9);
+            grafico.Valores.Add(2.5);
+            grafico.Valores.Add(9.5);
             grafico.Valores.Add(6);
             grafico.Valores.Add(3);                   
             
@@ -80,6 +86,58 @@ namespace TestForm
         private void btnAceptarTxtY_Click(object sender, EventArgs e)
         {
             grafico.TxtY = txtEjeY.Text;
+        }
+
+        private void abrirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Todos los archivos|*.*|XML|*.xml";
+            if(openFile.ShowDialog() == DialogResult.OK)
+            {
+                int i = -1;
+                graficos = new List<GraficoBarras>();
+                bool correcto = true;
+                try
+                {                    
+                    using (XmlReader reader = XmlReader.Create(openFile.FileName))
+                    {
+                        while (reader.Read())
+                        {
+                            switch (reader.Name.ToString())
+                            {
+                                case "grafico":
+                                    graficos.Add(new GraficoBarras());
+                                    i++;
+                                    break;
+                                case "nombre":
+                                    graficos[i].Name = reader.ReadElementContentAsString();
+                                    break;
+                                case "txtX":
+                                    graficos[i].TxtX = reader.ReadElementContentAsString();
+                                    break;
+                                case "txtY":
+                                    graficos[i].TxtY = reader.ReadElementContentAsString();
+                                    break;
+                                case "dato":
+                                    graficos[i].Valores.Add(reader.ReadElementContentAsDouble());
+                                    break;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    correcto = false;
+                    Console.WriteLine(ex.Message);                    
+                }
+
+                if (correcto)
+                {
+                    float propW = this.Width / columnas;
+                    float propH = this.Height / filas;
+
+                }
+            }           
         }
     }
 }

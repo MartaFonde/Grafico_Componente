@@ -31,10 +31,10 @@ namespace GraficoBarrasComponente
         private Color[] colores = { Color.Green, Color.Blue, Color.Yellow };
 
         
-        private List<int> valores;
+        private List<double> valores;
         [Category("Design")]
         [Description("Valores representados en la gráfica")]
-        public List<int> Valores
+        public List<double> Valores
         {
             set
             {
@@ -48,10 +48,10 @@ namespace GraficoBarrasComponente
         }
 
         
-        private int ejeX;
+        private double ejeX;
         [Category("Design")]
         [Description("Tamaño eje x")]
-        public int EjeX
+        public double EjeX
         {
             set
             {
@@ -59,7 +59,7 @@ namespace GraficoBarrasComponente
                 {
                     try
                     {
-                        Convert.ToInt32(value);
+                        Convert.ToDouble(value);
                         if(value > 0 && value <= Valores.Count)
                         {
                             ejeX = value;
@@ -92,10 +92,10 @@ namespace GraficoBarrasComponente
         }
 
         
-        private int ejeY;
+        private double ejeY;
         [Category("Design")]
         [Description("Tamaño del eje y")]
-        public int EjeY
+        public double EjeY
         {
             set
             {
@@ -103,7 +103,7 @@ namespace GraficoBarrasComponente
                 {
                     try
                     {
-                        Convert.ToInt32(value);
+                        Convert.ToDouble(value);
                         if(value > 0)
                         {
                             ejeY = value;
@@ -211,8 +211,8 @@ namespace GraficoBarrasComponente
         {
             InitializeComponent();
 
-            Valores = new List<int>();
-            Valores.Add(0);
+            Valores = new List<double>();
+            //Valores.Add(0);
             TipoTamaño = eTipoTamaño.Automático;
             TipoGrafico = eTipoGrafico.BARRAS;            
         }
@@ -249,18 +249,18 @@ namespace GraficoBarrasComponente
 
             if(Valores != null)
             {
-                int maxX;
-                int maxY;
+                float maxX;
+                float maxY;
 
                 if (TipoTamaño == eTipoTamaño.Automático)
                 {
                     maxX = Valores.Count;
-                    maxY = Valores.Max();
+                    maxY = (float)Valores.Max();
                 }
                 else
                 {
-                    maxX = EjeX;
-                    maxY = EjeY;
+                    maxX = (float)EjeX;
+                    maxY = (float)EjeY;
                 }
 
                 float widthGrafica = this.Width - 4 * propW;
@@ -268,15 +268,15 @@ namespace GraficoBarrasComponente
 
                 float propWGrafica = widthGrafica / (maxX * 2);
                 float propHGrafica = heightGrafica / maxY;
-                
-                float x = propW * 2 + propWGrafica;
+
+                float x = propW * 2 ;
 
                 if (TipoGrafico == eTipoGrafico.BARRAS)
                 {
                     int c = 0;
                     for (int i = 0; i < maxX; i++)
                     {
-                        float y = this.Height - 2 * propH - Valores[i] * propHGrafica;
+                        float y = (float)(this.Height - 2 * propH - Valores[i] * propHGrafica);
 
                         if (Valores[i] > maxY)
                         {
@@ -288,7 +288,7 @@ namespace GraficoBarrasComponente
                         {
                             b.Color = colores[c];
                             c = c < colores.Length - 1 ? c + 1 : 0;
-                            e.Graphics.FillRectangle(b, new RectangleF(x, y, propWGrafica, propHGrafica * Valores[i]));
+                            e.Graphics.FillRectangle(b, new RectangleF(x, y, propWGrafica, propHGrafica * (float)Valores[i]));
                         }
                        
                         x += propWGrafica * 2;
@@ -304,7 +304,7 @@ namespace GraficoBarrasComponente
                     }
                     else
                     {
-                        p1 = new PointF(x, this.Height - 2 * propH - Valores[0] * propHGrafica);
+                        p1 = new PointF(x, this.Height - 2 * propH - (float)Valores[0] * propHGrafica);
                     }                    
                     
                     for (int i = 1; i < maxX; i++)
@@ -316,7 +316,7 @@ namespace GraficoBarrasComponente
                         }
                         else
                         {
-                            p2 = new PointF(x, this.Height - 2 * propH - Valores[i] * propHGrafica);
+                            p2 = new PointF(x, this.Height - 2 * propH - (float)Valores[i] * propHGrafica);
                         }                                                                        
                         e.Graphics.DrawLine(pLineas, p1, p2);
                         p1 = p2;

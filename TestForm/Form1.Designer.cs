@@ -131,7 +131,7 @@ namespace TestForm
             // 
             this.groupBox1.Controls.Add(this.rbLinea);
             this.groupBox1.Controls.Add(this.rbBarras);
-            this.groupBox1.Location = new System.Drawing.Point(51, 12);
+            this.groupBox1.Location = new System.Drawing.Point(47, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(150, 76);
             this.groupBox1.TabIndex = 16;
@@ -142,7 +142,7 @@ namespace TestForm
             // 
             this.groupBox2.Controls.Add(this.rbManual);
             this.groupBox2.Controls.Add(this.rbAutomatico);
-            this.groupBox2.Location = new System.Drawing.Point(243, 12);
+            this.groupBox2.Location = new System.Drawing.Point(234, 29);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(145, 76);
             this.groupBox2.TabIndex = 17;
@@ -164,7 +164,7 @@ namespace TestForm
             // rbAutomatico
             // 
             this.rbAutomatico.AutoSize = true;
-            this.rbAutomatico.Location = new System.Drawing.Point(23, 20);
+            this.rbAutomatico.Location = new System.Drawing.Point(23, 21);
             this.rbAutomatico.Name = "rbAutomatico";
             this.rbAutomatico.Size = new System.Drawing.Size(78, 17);
             this.rbAutomatico.TabIndex = 0;
@@ -176,7 +176,7 @@ namespace TestForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(402, 29);
+            this.label4.Location = new System.Drawing.Point(403, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 18;
@@ -185,7 +185,7 @@ namespace TestForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(402, 61);
+            this.label5.Location = new System.Drawing.Point(403, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 19;
@@ -193,7 +193,7 @@ namespace TestForm
             // 
             // btnAceptarTamanho
             // 
-            this.btnAceptarTamanho.Location = new System.Drawing.Point(534, 32);
+            this.btnAceptarTamanho.Location = new System.Drawing.Point(535, 53);
             this.btnAceptarTamanho.Name = "btnAceptarTamanho";
             this.btnAceptarTamanho.Size = new System.Drawing.Size(136, 31);
             this.btnAceptarTamanho.TabIndex = 20;
@@ -203,24 +203,24 @@ namespace TestForm
             // 
             // txtTamanhoX
             // 
-            this.txtTamanhoX.Location = new System.Drawing.Point(433, 26);
+            this.txtTamanhoX.Location = new System.Drawing.Point(434, 47);
             this.txtTamanhoX.Name = "txtTamanhoX";
             this.txtTamanhoX.Size = new System.Drawing.Size(58, 20);
             this.txtTamanhoX.TabIndex = 21;
             // 
             // txtTamanhoY
             // 
-            this.txtTamanhoY.Location = new System.Drawing.Point(433, 58);
+            this.txtTamanhoY.Location = new System.Drawing.Point(434, 79);
             this.txtTamanhoY.Name = "txtTamanhoY";
             this.txtTamanhoY.Size = new System.Drawing.Size(58, 20);
             this.txtTamanhoY.TabIndex = 22;
             // 
             // grafico
             // 
-            this.grafico.EjeX = 1;
-            this.grafico.EjeY = 0;
+            this.grafico.EjeX = 1D;
+            this.grafico.EjeY = 0D;
             this.grafico.ForeColor = System.Drawing.Color.IndianRed;
-            this.grafico.Location = new System.Drawing.Point(12, 104);
+            this.grafico.Location = new System.Drawing.Point(9, 104);
             this.grafico.Name = "grafico";
             this.grafico.Size = new System.Drawing.Size(425, 334);
             this.grafico.TabIndex = 1;

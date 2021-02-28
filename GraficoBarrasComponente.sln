@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraficoBarrasComponente", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{0E1A2079-3744-4FF1-B8BB-6DF8BB42CC0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepresentacionVariosGraficos", "RepresentacionVariosGraficos\RepresentacionVariosGraficos.csproj", "{ABD5A323-105D-4FB6-8EFC-8B31AD9E8542}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0E1A2079-3744-4FF1-B8BB-6DF8BB42CC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1A2079-3744-4FF1-B8BB-6DF8BB42CC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1A2079-3744-4FF1-B8BB-6DF8BB42CC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD5A323-105D-4FB6-8EFC-8B31AD9E8542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD5A323-105D-4FB6-8EFC-8B31AD9E8542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD5A323-105D-4FB6-8EFC-8B31AD9E8542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD5A323-105D-4FB6-8EFC-8B31AD9E8542}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
