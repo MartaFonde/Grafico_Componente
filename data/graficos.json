@@ -1,0 +1,71 @@
+
+ [ 
+		{
+			"nombre": "Temperatura máxima - Vigo",
+			"txtX" : "Día",
+			"txtY" : "Cº",
+			"datos":[
+				16, 
+				18, 
+				15, 
+				13, 
+				15, 
+				18, 
+				24, 
+				26, 
+				23, 
+				19, 
+				21, 
+				14, 
+				12, 
+				9, 
+				6, 
+				8, 
+				15 				
+			]			
+		},
+		{
+			"nombre": "Temperatura mínima - Vigo",
+			"txtX" : "Día",
+			"txtY" : "cº",
+			"datos":[
+				8,
+				6,
+				9,
+				15,
+				13,
+				10,
+				8,
+				5,
+				4,
+				3,
+				3,
+				6,
+				9, 
+				4,
+				2, 
+				0
+			]			
+		},
+		{
+			"nombre": "Probabilidad de colapso",
+			"txtX" : "%",
+			"txtY" : "Mes",
+			"datos":[
+				45,
+				67,
+				32,
+				66,
+				44,
+				76,
+				43,
+				78,
+				88,
+				23,
+				34,
+				67
+			]			
+		}
+	]
+
+

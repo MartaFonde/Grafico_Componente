@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<graficos>
+	<grafico>
+		<nombre>PIB</nombre>
+		<txtX>Año</txtX>
+		<txtY>Billones US$ </txtY>
+		<datos>
+			<dato>597</dato>
+			<dato>627</dato>
+			<dato>705</dato>
+			<dato>905</dato>
+			<dato>1067</dato>
+			<dato>1153</dato>
+			<dato>1259</dato>
+			<dato>1472</dato>
+			<dato>1625</dato>
+			<dato>1485</dato>
+			<dato>1421</dato>
+			<dato>1478</dato>
+			<dato>1325</dato>
+			<dato>1355</dato>
+			<dato>1369</dato>
+			<dato>1195</dato>
+			<dato>1232</dato>
+			<dato>1312</dato>
+			<dato>1422</dato>
+			<dato>1393</dato>
+		</datos>
+	</grafico>
+	<grafico>
+		<nombre>Desempleo 2000 - 2019</nombre>
+		<txtX>Año</txtX>
+		<txtY>%</txtY>
+		<datos>
+			<dato>13.79</dato>
+			<dato>10.35</dato>
+			<dato>11.15</dato>
+			<dato>11.09</dato>
+			<dato>9.15</dato>
+			<dato>8.23</dato>
+			<dato>11.25</dato>
+			<dato>17.86</dato>
+			<dato>19.86</dato>
+			<dato>21.39</dato>
+			<dato>24.79</dato>
+			<dato>24.44</dato>
+			<dato>22.06</dato>
+			<dato>19.64</dato>
+			<dato>17.22</dato>
+			<dato>15.26</dato>
+			<dato>13.96</dato>
+		</datos>
+	</grafico>
+	<grafico>
+		<nombre>Deuda pública 2000 - 2019</nombre>
+		<txtX>Año</txtX>
+		<txtY>% PIB</txtY>
+		<datos>
+			<dato>57.8</dato>
+			<dato>54</dato>
+			<dato>51.2</dato>
+			<dato>47.7</dato>
+			<dato>45.4</dato>
+			<dato>42.4</dato>
+			<dato>39.1</dato>
+			<dato>35.8</dato>
+			<dato>39.7</dato>
+			<dato>53.3</dato>
+			<dato>60.5</dato>
+			<dato>69.9</dato>
+			<dato>86.3</dato>
+			<dato>95.8</dato>
+			<dato>100</dato>
+			<dato>99.3</dato>
+			<dato>99.2</dato>
+			<dato>98.6</dato>
+			<dato>97.4</dato>			
+			<dato>95.5</dato>
+		</datos>
+	</grafico>
+	
+</graficos>

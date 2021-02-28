@@ -95,8 +95,6 @@ namespace RepresentacionVariosGraficos
                 MessageBox.Show("Error al leer xml: " + ex.Message);
                 return false;
             }
-            MessageBox.Show(graficos.Count + "");
-
             return true;
         }
 
@@ -145,19 +143,23 @@ namespace RepresentacionVariosGraficos
                 MessageBox.Show("Error parse JObj: " + js);
                 return false;
             }
-            MessageBox.Show(graficos.Count+"");
             return true;
         }
 
-        private void crearGraficos()
-        {            
-            foreach (Control g in Controls)
+        private void eliminarGraficos()
+        {
+            for (int i = Controls.Count - 1; i >= 0; i--)
             {
-                if(g is GraficoBarras || g is Label)
+                if (Controls[i] is Label || Controls[i] is GraficoBarras)
                 {
-                    this.Controls.Remove(g);
+                    Controls.RemoveAt(i);
                 }
             }
+        }
+
+        private void crearGraficos()
+        {
+            eliminarGraficos();
 
             Label lbl;
             int propW = this.Width / columnas;
@@ -210,11 +212,6 @@ namespace RepresentacionVariosGraficos
                 }
                 this.Controls.Add(g);
                 this.Controls.Add(lbl);
-
-                if(f == filas - 1)
-                {
-                    break;
-                }
                 
             }
         }
@@ -324,7 +321,5 @@ namespace RepresentacionVariosGraficos
         {
             this.Close();
         }
-
-    }
-    
+    }    
 }
