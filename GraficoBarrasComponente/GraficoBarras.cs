@@ -78,7 +78,7 @@ namespace GraficoBarrasComponente
                 }
                 else
                 {
-                    if(Valores != null)
+                    if(Valores != null && Valores.Count > 0)
                     {
                         ejeX = Valores.Count();
                     }                    
@@ -121,7 +121,7 @@ namespace GraficoBarrasComponente
                 }
                 else
                 {
-                    if(Valores != null)
+                    if(Valores != null && Valores.Count > 0)
                     {
                         ejeY = Valores.Max();
                     }                    
@@ -212,7 +212,6 @@ namespace GraficoBarrasComponente
             InitializeComponent();
 
             Valores = new List<double>();
-            //Valores.Add(0);
             TipoTamaño = eTipoTamaño.Automático;
             TipoGrafico = eTipoGrafico.BARRAS;            
         }

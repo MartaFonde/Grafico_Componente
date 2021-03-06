@@ -321,5 +321,13 @@ namespace RepresentacionVariosGraficos
         {
             this.Close();
         }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if(graficos != null)
+            {
+                crearGraficos();
+            }           
+        }
     }    
 }

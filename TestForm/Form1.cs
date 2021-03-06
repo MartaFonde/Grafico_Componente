@@ -29,20 +29,22 @@ namespace TestForm
             grafico.Valores.Add(2.5);
             grafico.Valores.Add(9.5);
             grafico.Valores.Add(6);
-            grafico.Valores.Add(3);                   
-            
+            grafico.Valores.Add(3);
+
             rbAutomatico.Checked = true;           
             rbBarras.Checked = true;
-
         }
 
         private void rbAutomatico_CheckedChanged(object sender, EventArgs e)
         {
             grafico.TipoTamaño = GraficoBarrasComponente.eTipoTamaño.Automático;
-            grafico.EjeX = grafico.Valores.Count;
-            grafico.EjeY = grafico.Valores.Max();
-            txtTamanhoX.Text = grafico.Valores.Count.ToString();
-            txtTamanhoY.Text = grafico.Valores.Max().ToString();
+            if(grafico.Valores != null && grafico.Valores.Count > 0)
+            {
+                grafico.EjeX = grafico.Valores.Count;
+                grafico.EjeY = grafico.Valores.Max();
+                txtTamanhoX.Text = grafico.Valores.Count.ToString();
+                txtTamanhoY.Text = grafico.Valores.Max().ToString();
+            }                        
             txtTamanhoX.Enabled = false;
             txtTamanhoY.Enabled = false;
         }
